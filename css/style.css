@@ -1,0 +1,105 @@
+/* ==== RESET ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==== HERO SECTION ==== */
+.hero {
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #320b3a, #700092, #270b3a);
+    background-size: 300% 300%;
+    animation: gradientShift 12s ease infinite;
+}
+
+/* ==== ANIMACIÓN DEL GRADIENTE ==== */
+@keyframes gradientShift {
+    0% {
+    background-position: 0% 50%;
+    }
+    50% {
+    background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
+}
+
+/* ==== CONTENIDO ==== */
+.hero-content {
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero-content h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+
+}
+
+.hero-content h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 2rem ;
+    color: #e3e3e3;
+}
+
+/* ==== BOTÓN ==== */
+.btn-primary {
+    background: #aa13cf;
+    background: linear-gradient(90deg, #280c2e, #ad51c9);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(140, 0, 255, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(140, 0, 255, 0.45);
+}
+
+/* ==== ANIMACIÓN DE ENTRADA ==== */
+@keyframes fadeInUp {
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+    .hero-content h1 {
+    font-size: 2.2rem;
+    }
+    .hero-content p {
+    font-size: 1rem;
+    }
+}

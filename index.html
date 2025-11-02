@@ -1,30 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paola Lacosta</title>
+    <title>Paola Lacosta </title>
+    <meta name="description" content="Aprendé a dominar tus números con Paola Lacosta. Transformá tu negocio, ganá claridad financiera y alcanzá más rentabilidad.">
+    <meta name="keywords" content="finanzas para emprendedores, claridad financiera, gestión de negocios, rentabilidad, Paola Lacosta">
+    <meta name="author" content="Paola Lacosta">
+
+    <!-- Open Graph (para compartir en redes sociales) -->
+    <meta property="og:title" content="Dominá tus números con Paola Lacosta">
+    <meta property="og:description" content="Programa para dueños de negocios que quieren claridad y control financiero.">
+    <meta property="og:image" content="https://www.paolalacosta.com/preview.jpg">
+    <meta property="og:url" content="https://www.paolalacosta.com">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/logo.png" type="image/x-icon">
+
+    <!-- Fonts / Icons -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Paola Lacosta",
+        "jobTitle": "Consultora Financiera",
+        "url": "https://www.paolalacosta.com",
+        "sameAs": [
+            "https://www.youtube.com/@paolalacosta",
+            "https://www.linkedin.com/in/paolalacosta/",
+            "https://www.instagram.com/paolalacosta/"
+        ]
+        }
+    </script>
 </head>
+
 <body>
+
+    <!-- ==== HERO SECTION ==== -->
     <section class="hero">
         <div class="hero-content">
             <h1>Paola Lacosta</h1>
-            <h3>Dominá tus números</h3>
-            <p>+100 dueños de negocios ya transformaron el suyo con “Dominá tus números”.</p>
-        
-            <a href="#" class="btn-primary">Vos podes ser el proximo</a>
+            <h2>Dominá tus números</h2>
+            <p>Más de 100 dueños de negocios ya transformaron el suyo con “Dominá tus números”.</p>
+            <a href="#calendly" class="btn-primary" aria-label="Agendá tu sesión">Vos podés ser el próximo</a>
         </div>
     </section>
 
+    <!-- ==== VIDEO ==== -->
     <section class="hero-video">
-        <h3>Atención: Mirá el video antes de avanzar.</h3>
+        <h2>Atención: mirá el video antes de avanzar</h2>
         <div class="video-container">
             <iframe
-                src="https://www.youtube.com/embed/JTfgtOqs2S8?si=BohRS3vsMlgxbkso&autoplay=0&mute=0&rel=0"
-                title="Video institucional"
+                loading="lazy"
+                src="https://www.youtube.com/embed/JTfgtOqs2S8?rel=0"
+                title="Video institucional Dominá tus números"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
@@ -32,28 +66,30 @@
         </div>
     </section>
 
-    <section class="calendly-section">
+    <!-- ==== CALENDLY ==== -->
+    <section id="calendly" class="calendly-section">
         <div class="calendly-container">
-            <h2>Agendá tu sesión y empezá a marcar la diferencia.</h2>
-            <p>Coordiná una reunión con nuestro equipo en el momento que mejor te convenga.</p>
-    
+            <h2>Agendá tu sesión y empezá a marcar la diferencia</h2>
+            <p>Coordina una reunión con nuestro equipo en el momento que mejor te convenga.</p>
+
             <div class="calendly-embed">
-                <iframe 
+                <iframe
+                    loading="lazy"
                     src="https://calendly.com/placosta71/conversacion?month=2025-11"
-                    width="100%" 
+                    title="Agendá tu sesión con Paola Lacosta"
+                    width="100%"
                     height="700"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
             </div>
-
         </div>
     </section>
 
+    <!-- ==== PAIN SECTION ==== -->
     <section class="pain-section">
         <div class="pain-container">
-            <h2>Sé que esto es lo que te pasa con tu negocio:</h2>
-
+            <h2>Sé que esto es lo que te pasa con tu negocio</h2>
             <ul class="pain-list">
                 <li>El desorden financiero te estresa, te agota y no te deja enfocarte en lo importante.</li>
                 <li>Vivís corriendo detrás de los gastos, como si el dinero nunca alcanzara.</li>
@@ -62,11 +98,12 @@
                 <li>No tenés claro cuánto realmente te deja tu negocio cada mes.</li>
                 <li>No sabés en qué se está yendo tu plata.</li>
                 <li>Te falta tiempo para ordenar los números y siempre lo postergás.</li>
-                <li>Terminarás mezclando tus finanzas personales con las del negocio.</li>
+                <li>Terminás mezclando tus finanzas personales con las del negocio.</li>
             </ul>
         </div>
     </section>
 
+    <!-- ==== SOLUTION SECTION ==== -->
     <section class="solution-section">
         <div class="solution-container">
             <h2>¿Qué podés conquistar con <span>Dominá tus números</span>?</h2>
@@ -77,71 +114,73 @@
                     <p>Vas a ver con total nitidez cuánto gana tu negocio y cómo se separa de tus finanzas personales. Nada más de mezclar, nada más de suposiciones.</p>
                 </div>
 
-            <div class="solution-card">
-                <h3>Decisiones que multiplican</h3>
-                <p>Vas a tomar decisiones estratégicas, respaldadas por datos reales, que impulsan tu rentabilidad y te sacan de la incertidumbre.</p>
-            </div>
+                <div class="solution-card">
+                    <h3>Decisiones que multiplican</h3>
+                    <p>Tomá decisiones estratégicas respaldadas por datos reales que impulsan tu rentabilidad.</p>
+                </div>
 
-            <div class="solution-card">
-                <h3>Más rentabilidad, más libertad</h3>
-                <p>Al decidir con claridad, es muy probable que tu negocio empiece a dejarte más margen mes a mes. Más plata, menos desgaste.</p>
-            </div>
+                <div class="solution-card">
+                    <h3>Más rentabilidad, más libertad</h3>
+                    <p>Al decidir con claridad, tu negocio puede dejarte más margen mes a mes. Más plata, menos desgaste.</p>
+                </div>
 
-            <div class="solution-card">
-                <h3>Gestión sin fricción</h3>
-                <p>Con un sistema hecho a tu medida, registrar tus movimientos te va a llevar solo 5 minutos por día. Menos estrés, más foco.</p>
-            </div>
+                <div class="solution-card">
+                    <h3>Gestión sin fricción</h3>
+                    <p>Con un sistema hecho a tu medida, registrar tus movimientos te llevará solo 5 minutos por día.</p>
+                </div>
 
-            <div class="solution-card">
-                <h3>Planificación que inspira</h3>
-                <p>Vamos a diseñar juntos presupuestos y metas de ahorro que sean ambiciosas, alcanzables y alineadas con tu visión.</p>
-            </div>
+                <div class="solution-card">
+                    <h3>Planificación que inspira</h3>
+                    <p>Diseñá presupuestos y metas ambiciosas y alcanzables alineadas con tu visión.</p>
+                </div>
 
-            <div class="solution-card">
-                <h3>Confianza para liderar tu negocio</h3>
-                <p>Vas a dejar de depender de intuiciones o terceros para entender tu economía. Con Cuentas Claras, vas a tener el control total de tus números.</p>
+                <div class="solution-card">
+                    <h3>Confianza para liderar tu negocio</h3>
+                    <p>Dejá de depender de intuiciones o terceros. Con Cuentas Claras, vas a tener control total.</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- ==== VIDEOS SECTION ==== -->
     <section class="videos-section">
         <h2>Explorá nuestros videos</h2>
         <div class="carousel-container">
-            <button class="carousel-btn prev">‹</button>
+            <button class="carousel-btn prev" aria-label="Video anterior">‹</button>
 
             <div class="carousel">
                 <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/RI3ZsCK3a9I?si=VsFzZk-qA3lLTA33" title="Video 1" allowfullscreen></iframe>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/RI3ZsCK3a9I?rel=0" title="Video 1 - Paola Lacosta" allowfullscreen></iframe>
                 </div>
                 <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/VnwUJsyu3gU?si=PBbqA_HJIsrmYu7m" title="Video 2" allowfullscreen></iframe>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/VnwUJsyu3gU?rel=0" title="Video 2 - Paola Lacosta" allowfullscreen></iframe>
                 </div>
                 <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/U2-9Jke2VHs?si=jzwUWIbZhWUDS0xw" title="Video 3" allowfullscreen></iframe>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/U2-9Jke2VHs?rel=0" title="Video 3 - Paola Lacosta" allowfullscreen></iframe>
                 </div>
                 <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/LUBzMD2IFso?si=-AfzulNbq4P-BBF-" title="Video 4" allowfullscreen></iframe>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/LUBzMD2IFso?rel=0" title="Video 4 - Paola Lacosta" allowfullscreen></iframe>
                 </div>
             </div>
 
-            <button class="carousel-btn next">›</button>
+            <button class="carousel-btn next" aria-label="Video siguiente">›</button>
         </div>
     </section>
 
-
+    <!-- ==== FOOTER ==== -->
     <footer class="footer">
         <div class="footer-content">
             <h2 class="footer-logo">Paola Lacosta</h2>
             <p class="footer-text">Dominá tus números</p>
 
             <div class="social-icons">
-                <a href="https://www.youtube.com/@paolalacosta" target="_blank" aria-label="YouTube">
+                <a href="https://www.youtube.com/@paolalacosta" target="_blank" aria-label="YouTube Paola Lacosta">
                     <i class="fab fa-youtube"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/paolalacosta/" target="_blank" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/paolalacosta/" target="_blank" aria-label="LinkedIn Paola Lacosta">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://www.instagram.com/paolalacosta/" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/paolalacosta/" target="_blank" aria-label="Instagram Paola Lacosta">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
@@ -149,6 +188,10 @@
             <p class="footer-copy">© 2025 Paola Lacosta. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
 
 
 

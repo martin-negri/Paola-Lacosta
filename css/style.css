@@ -48,7 +48,7 @@
 
 }
 
-.hero-content h3 {
+.hero-content h2 {
     font-family: "Poppins", sans-serif;
     font-size: 1.7rem;
     font-weight: 500;
@@ -65,22 +65,87 @@
 
 /* ==== BOTÓN ==== */
 .btn-primary {
-    background: #aa13cf;
-    background: linear-gradient(90deg, #280c2e, #ad51c9);
-    color: #fff;
-    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
     padding: 0.9rem 2rem;
-    border-radius: 50px;
+    font-size: 15px;
     font-weight: 600;
     font-family: "Inter", sans-serif;
-    transition: all 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: #aa13cf;
+    background: linear-gradient(90deg, #280c2e, #ad51c9, #280c2e);
+    background-size: 300%;
+    transition: all 1s ease;
     box-shadow: 0 8px 20px rgba(140, 0, 255, 0.3);
 }
 
+.btn-primary::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #280c2e;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+}
+
+.btn-primary::before {
+    content: "";
+    background: linear-gradient(
+    45deg,
+    #280c2e, #ad51c9, #3d0f4e, #aa13cf, #280c2e
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background-size: 600%;
+    z-index: -1;
+    filter: blur(8px);
+    animation: glowing 30s linear infinite;
+    transition: opacity 0.7s ease-in-out;
+    border-radius: 50px;
+    opacity: 1;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
 .btn-primary:hover {
+    filter: brightness(1.6) drop-shadow(0 0 6px #ad51c9);
     transform: translateY(-3px);
     box-shadow: 0 12px 25px rgba(140, 0, 255, 0.45);
 }
+
+.btn-primary:hover::before {
+    opacity: 1;
+}
+
+.btn-primary:active::after {
+    background-color: transparent;
+}
+
+.btn-primary:active {
+    color: #fff;
+    font-weight: bold;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* ==== ANIMACIÓN DE ENTRADA ==== */
 @keyframes fadeInUp {
@@ -115,7 +180,7 @@
     background: #ffffff;
 }
 
-.hero-video h3{
+.hero-video h2{
     font-family: "Poppins", sans-serif;
     font-size: 2.5rem;
     text-align: center;
@@ -212,7 +277,6 @@
 }
 
 /* ==== PAIN SECTION ==== */
-
 .pain-section {
     background: #ffffff;
     padding: 6rem 2rem;
@@ -226,9 +290,9 @@
     text-align: left;
     font-family: "Inter", sans-serif;
     color: #241631e7;
-
 }
 
+/* ==== TÍTULO ==== */
 .pain-container h2 {
     font-family: "Poppins", sans-serif;
     font-size: 2.3rem;
@@ -237,74 +301,81 @@
     margin-bottom: 2rem;
     text-align: center;
     position: relative;
-    
 }
 
-/* Línea decorativa bajo el título */
 .pain-container h2::after {
     content: "";
     display: block;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg,  #9f27b9, #750e94);
+    background: linear-gradient(90deg, #9f27b9, #750e94);
     margin: 1rem auto 0;
     border-radius: 2px;
 }
 
+/* ==== LISTA ==== */
 .pain-list {
     list-style: none;
     display: grid;
     gap: 1.2rem;
     padding-left: 0;
-    
 }
 
-/* Cada ítem con ícono, fondo suave y animación sutil */
+/* ==== ÍTEMS ==== */
 .pain-list li {
     background: #ffffff;
-    padding: 1.2rem 1.6rem;
+    padding: 1.2rem 1.6rem 1.2rem 2.8rem;
     border-radius: 14px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
-    font-family: "Inter", sans-serif;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     line-height: 1.6;
     font-size: 1.1rem;
     position: relative;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     border-left: 5px solid transparent;
+    will-change: transform;
 }
 
-/* Ícono visual con pseudo-elemento */
+/* Ícono visual */
 .pain-list li::before {
-    content: " ⚠️ ";
+    content: "⚠️";
     position: absolute;
-    left: -.1rem;
-    top: 1.2rem;
-    font-size: 1.2rem;
-    opacity: 0.8;
-
+    left: 1rem;
+    top: 1rem;
+    font-size: 1.3rem;
+    opacity: 0.85;
 }
 
-/* Animación hover profesional */
-.pain-list li:hover {
-    transform: translateY(-3px);
+/* === HOVER & TOUCH ==== */
+.pain-list li:hover,
+.pain-list li:active {
+    transform: translateY(-4px);
     border-left: 5px solid #a200ff;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 30px rgba(162, 0, 255, 0.2);
     cursor: pointer;
-
 }
 
-/* Responsivo */
+/* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
     .pain-container h2 {
     font-size: 1.8rem;
     }
+
     .pain-list li {
     font-size: 1rem;
-    padding: 1rem 1.2rem 1rem 2.8rem;
+    padding: 1rem 1.2rem 1rem 3rem;
+    }
+
+  /* Mayor espacio táctil y animación más suave */
+    .pain-list li:active {
+    transform: scale(0.98);
+    transition: transform 0.15s ease;
+    box-shadow: 0 6px 18px rgba(162, 0, 255, 0.15);
     }
 }
 
 
+
+/* ==== SOLUTION SECTION ==== */
 .solution-section {
     background: #ffffff;
     padding: 6rem 2rem;
@@ -324,10 +395,9 @@
     font-family: "Poppins", sans-serif;
     font-size: 2.4rem;
     font-weight: 700;
-    color: #0b1f3a;
+    color: #241631c9;
     margin-bottom: 3rem;
     line-height: 1.3;
-    color: #241631c9;
 }
 
 .solution-container h2 span {
@@ -336,24 +406,26 @@
     -webkit-text-fill-color: transparent;
 }
 
-/* === GRID DE BENEFICIOS === */
+/* ==== GRID DE BENEFICIOS ==== */
 .solution-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
-/* === CARD INDIVIDUAL === */
+/* ==== CARD INDIVIDUAL ==== */
 .solution-card {
     background: #ffffff;
     border-radius: 20px;
     padding: 2rem;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.35s ease;
     position: relative;
     overflow: hidden;
+    will-change: transform;
 }
 
+/* Línea decorativa superior */
 .solution-card::before {
     content: "";
     position: absolute;
@@ -367,6 +439,7 @@
     transition: transform 0.4s ease;
 }
 
+/* Hover (desktop) */
 .solution-card:hover::before {
     transform: scaleX(1);
 }
@@ -384,25 +457,40 @@
     line-height: 1.6;
 }
 
-/* === EFECTO HOVER === */
+/* ==== EFECTO HOVER ==== */
 .solution-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
-/* === RESPONSIVE === */
+/* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
     .solution-container h2 {
     font-size: 2rem;
     }
+
     .solution-card {
     padding: 1.5rem;
     }
+
     .solution-card h3 {
     font-size: 1.2rem;
     }
-}
 
+  /* Simula hover en pantallas táctiles */
+    .solution-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 10px 25px rgba(177, 104, 219, 0.25);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+  /* Muestra también la barra superior cuando se toca */
+    .solution-card:active::before {
+    transform: scaleX(1);
+    }
+}
+/* ==== VIDEOS SECTION ==== */
 .videos-section {
     text-align: center;
     padding: 4rem 2rem;
@@ -558,4 +646,18 @@
     margin-top: 1rem;
     border-top: 1px solid rgba(0,0,0,0.1);
     padding-top: 1rem;
+}
+
+/* ==== ACCESIBILIDAD Y RENDIMIENTO ==== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    }
+}
+
+/* ==== MEJORA DE CONTRASTE EN BOTONES ==== */
+.btn-primary {
+    color: #fff;
+    background: linear-gradient(90deg, #4c0b5c, #b35ad8);
 }

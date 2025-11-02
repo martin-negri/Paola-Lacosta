@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const prev = document.querySelector('.carousel-btn.prev');
 
     if (carousel && next && prev) {
-        const scrollAmount = carousel.offsetWidth;
+        const scrollAmount = carousel.offsetWidth * 0.9;
 
-        next.addEventListener('click', () => {
+    next.addEventListener('click', () => {
         carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        });
-
-        prev.addEventListener('click', () => {
-        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        });
-    }
     });
+
+    prev.addEventListener('click', () => {
+        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+    }
+});

@@ -470,7 +470,7 @@ html {
 /* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
     .solution-container h2 {
-    font-size: 2rem;
+    font-size: 2.7rem;
     }
 
     .solution-card {
@@ -537,7 +537,7 @@ html {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -552,7 +552,7 @@ html {
 
 /* ==== ITEM ==== */
 .video-item {
-    min-width: 560px;
+    min-width: 660px;
     flex: 0 0 auto;
     border-radius: 16px;
     overflow: hidden;

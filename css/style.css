@@ -162,7 +162,7 @@ html {
 /* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
     .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     }
     .hero-content p {
     font-size: 1rem;
@@ -630,8 +630,9 @@ html {
     }
 
     .video-item iframe {
-    height: 250px;
-    border-radius: 18px;
+    width: 100%;
+    height: 100%;
+    border: none;
     }
 
   /* Efecto táctil */

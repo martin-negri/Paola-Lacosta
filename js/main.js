@@ -15,3 +15,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hoverables = document.querySelectorAll(".pain-list li, .solution-card");
+
+    hoverables.forEach(el => {
+    el.addEventListener("touchstart", () => {
+        el.classList.add("hover-active");
+    });
+
+    el.addEventListener("touchend", () => {
+        setTimeout(() => el.classList.remove("hover-active"), 300);
+    });
+    });
+});
+
+

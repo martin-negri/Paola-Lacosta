@@ -26,13 +26,26 @@ document.addEventListener('DOMContentLoaded', () => {
         carousel.addEventListener('scroll', updateButtons);
     }
 
-    // --- Hover táctil ---
-    const hoverables = document.querySelectorAll('.pain-list li, .solution-card');
-    hoverables.forEach(el => {
-        el.addEventListener('touchstart', () => el.classList.add('hover-active'));
-        el.addEventListener('touchend', () => {
-            setTimeout(() => el.classList.remove('hover-active'), 300);
-        });
-    });
-});
+   // --- Hover táctil (compatible con todos los móviles) ---
+const hoverables = document.querySelectorAll('.pain-list li, .solution-card');
 
+hoverables.forEach(el => {
+    // Activa el efecto al tocar
+    el.addEventListener('pointerdown', e => {
+        // Evita que se interprete como scroll inmediato
+        e.preventDefault();
+        el.classList.add('hover-active');
+    });
+
+    // Lo desactiva después de un breve tiempo o al soltar
+    el.addEventListener('pointerup', () => {
+        setTimeout(() => el.classList.remove('hover-active'), 300);
+    });
+
+    // También si el dedo sale del elemento
+    el.addEventListener('pointerleave', () => {
+        el.classList.remove('hover-active');
+    });
+}); 
+
+});

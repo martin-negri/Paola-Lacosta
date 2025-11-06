@@ -441,6 +441,8 @@ html {
     );
     background-size: 600%;
     -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: glowingText 30s linear infinite;
     filter: drop-shadow(0 0 8px rgba(173, 81, 201, 0.4));
@@ -759,6 +761,8 @@ html {
         #280c2e
     );
     background-size: 600%;
+    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: glowingText 30s linear infinite;

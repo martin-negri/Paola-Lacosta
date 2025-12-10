@@ -535,6 +535,7 @@
 
     .hero-video {
         padding: var(--space-lg) var(--space-sm);
+        padding-bottom: 2rem;
         gap: var(--space-sm);
         text-align: center;
     }
@@ -1148,7 +1149,6 @@
     filter: drop-shadow(0 0 6px rgba(177,10,219,0.575));
 }
 
-
 .process-steps {
     list-style: none;
     padding: 0;
@@ -1172,7 +1172,15 @@
     transition: 0.25s ease;
 }
 
+/* Hover normal (desktop) */
 .process-step:hover {
+    transform: translateY(-4px);
+    border-left-color: #a200ff;
+    box-shadow: var(--shadow-strong);
+}
+
+/* Hover táctil (mobile friendly) */
+.process-step.hover-active {
     transform: translateY(-4px);
     border-left-color: #a200ff;
     box-shadow: var(--shadow-strong);
@@ -1199,7 +1207,6 @@
 =========================================================== */
 
 @media (max-width: 1024px) {
-
     .process-section {
         padding: 3rem 1.5rem;
         margin-top: 3rem;
@@ -1228,9 +1235,7 @@
     }
 }
 
-
 @media (max-width: 768px) {
-
     .process-section {
         padding: 2.5rem 1rem;
         margin-top: 2.5rem;
@@ -1685,7 +1690,6 @@
 .video-modal-content {
     width: 95%;
     max-width: 1100px;
-
     aspect-ratio: 16/9;
 
     /* Animación de zoom suave */
@@ -1711,8 +1715,6 @@
     border: none;
     display: block;
 }
-
-
 
 /* -----------------------------------------------------------
     HALO INFERIOR ÚNICO
@@ -1772,17 +1774,71 @@
     border-radius: var(--radius-box);
 }
 
-@media (max-width: 768px) {
+/* ===========================================================
+    RESPONSIVE MEDIA QUERIES
+=========================================================== */
 
+/* === TABLET ≤ 1024px === */
+@media (max-width: 1024px) {
+    .calendly-section {
+        padding: var(--space-xxl) var(--space-lg);
+        text-align: center;
+    }
+
+    .calendly-section::after {
+        width: 95%;
+        height: calc(var(--halo-height) * 0.95);
+    }
+
+    .calendly-container {
+        width: min(96%, 880px);
+        margin: 0 auto;
+        border-radius: calc(var(--radius-box) * 0.9);
+    }
+
+    .calendly-container h2 {
+        font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+        margin-bottom: var(--space-md);
+    }
+
+    .calendly-container p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .calendly-embed iframe {
+        height: 680px;
+    }
+
+    /* Modal */
+    .video-modal {
+        background: rgba(0, 0, 0, 0.50);
+        backdrop-filter: blur(5px);
+    }
+
+    .video-modal-content {
+        width: 94%;
+        max-width: 920px;
+        border-radius: 18px;
+        box-shadow: 0 18px 54px rgba(0,0,0,0.50);
+        transform: scale(0.88);
+    }
+
+    .video-modal.show .video-modal-content {
+        transform: scale(1);
+    }
+}
+
+/* === MOBILE ≤ 768px === */
+@media (max-width: 768px) {
     .calendly-section {
         padding: var(--space-xl) var(--space-md);
         text-align: center;
     }
 
-    .calendly-section::before,
     .calendly-section::after {
         width: 92%;
-        height: calc(var(--halo-height) * .9);
+        height: calc(var(--halo-height) * 0.9);
     }
 
     .calendly-container {
@@ -1792,39 +1848,46 @@
         box-shadow: var(--shadow-soft);
     }
 
-
-    .calendly-container iframe {
-        width: 100%;
-        height: 650px;
-    }
-
-    .calendly-section h3 {
+    .calendly-container h2 {
         font-size: clamp(1.6rem, 4vw, 2rem);
         margin-bottom: var(--space-md);
     }
+
+    .calendly-embed iframe {
+        height: 650px;
+    }
+
+    /* Modal */
+    .video-modal {
+        background: rgba(0, 0, 0, 0.48);
+        backdrop-filter: blur(5px);
+    }
+
+    .video-modal-content {
+        width: 96%;
+        max-width: 720px;
+        border-radius: 16px;
+        box-shadow: 0 16px 48px rgba(0,0,0,0.48);
+        transform: scale(0.9);
+    }
+
+    .video-modal.show .video-modal-content {
+        transform: scale(1);
+    }
 }
 
-
+/* === SMALL MOBILE ≤ 480px === */
 @media (max-width: 480px) {
-
     .calendly-section {
         padding: var(--space-lg) var(--space-sm);
         gap: var(--space-sm);
         text-align: center;
     }
 
-    .calendly-section::before,
     .calendly-section::after {
         width: 100%;
         height: calc(var(--halo-height) * 0.55);
         border-radius: 900px;
-    }
-
-
-    .calendly-section h3 {
-        font-size: clamp(1.3rem, 6vw, 1.7rem);
-        margin-bottom: var(--space-sm);
-        line-height: 1.2;
     }
 
     .calendly-container {
@@ -1833,11 +1896,35 @@
         box-shadow: 0 6px 16px rgba(105, 6, 158, 0.10);
     }
 
-    .calendly-container iframe {
-        width: 100%;
+    .calendly-container h2 {
+        font-size: clamp(1.3rem, 6vw, 1.7rem);
+        margin-bottom: var(--space-sm);
+        line-height: 1.2;
+    }
+
+    .calendly-embed iframe {
         height: 520px;
     }
+
+    /* Modal */
+    .video-modal {
+        background: rgba(0, 0, 0, 0.46);
+        backdrop-filter: blur(4px);
+    }
+
+    .video-modal-content {
+        width: 98%;
+        max-width: 420px;
+        border-radius: 14px;
+        box-shadow: 0 14px 42px rgba(0,0,0,0.46);
+        transform: scale(0.92);
+    }
+
+    .video-modal.show .video-modal-content {
+        transform: scale(1);
+    }
 }
+
 
 
 /* ===========================================================
